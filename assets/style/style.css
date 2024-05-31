@@ -84,9 +84,16 @@ body {
     border-radius: 2rem;
     padding: 1rem;
     cursor: pointer;
+    color: #000;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 460px) {
+
+    .input__container-password {
+        font-size: 1rem;
+    }
+
     .container {
         width: 95%;
         min-width: auto;
@@ -104,6 +111,7 @@ body {
         width: 95%;
         min-width: 300px;
     }
+
     .password__caractere {
         gap: 1rem;
     }
