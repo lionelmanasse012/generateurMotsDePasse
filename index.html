@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <title>Générateur des Mots de passe</title>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div class="input__container">
+        <input
+          type="text"
+          id="inputPassword"
+          class="input__container-password"
+          value="Générateur des MDP"
+          readonly
+        />
+      </div>
+
+      <div class="input__container">
+        <input
+          type="range"
+          id="inputRange"
+          class="input__container-range"
+          value="8"
+          min="4"
+          max="24"
+          oninput="document.getElementById('inputRangeValue').value =this.value"
+        />
+        <input id="inputRangeValue" class="input__range-value" value="8" readonly ></input>
+      </div>
+
+      <ul class="password__caractere">
+        <li class="password__caractere-item">
+          <input type="checkbox" id="passwordLowercase" class="password-a-z" checked/>
+          <label for="passwordLowercase">a-z</label>
+        </li>
+        <li class="password__caractere-item">
+          <input type="checkbox" id="passwordUppercase" />
+          <label for="passwordUppercase">A-Z</label>
+        </li>
+        <li class="password__caractere-item">
+          <input type="checkbox" id="passwordNumber" />
+          <label for="passwordNumber">0-9</label>
+        </li>
+        <li class="password__caractere-item">
+          <input type="checkbox" id="passwordSymbols" />
+          <label for="passwordSymbols">!-?</label>
+        </li>
+      </ul>
+
+      <button id="genererPassword" class="generer__password">
+        Générer des Mots de passe
+      </button>
+    </div>
+
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

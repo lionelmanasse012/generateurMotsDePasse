@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 2rem;
+    background: #e26565;
+    border-radius: 1rem;
+    width: 40%;
+    min-width: 450px;
+}
+
+.input__container-password,
+.input__range-value {
+    font-size: 1.8rem;
+    border: none;
+    outline: none;
+    width: 450px;
+    padding: 0 10px;
+    text-align: center;
+    background: none;
+    cursor: pointer;
+}
+
+.input__range-value {
+    font-size: 1.5rem;
+    width: 2rem;
+    padding: 0;
+    cursor: default;
+}
+
+.input__container:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.password__caractere {
+    display: flex;
+    gap: 3rem;
+    margin: 1rem 0;
+}
+
+.password__caractere-item label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 1rem;
+    background: linear-gradient(to top, #accbee 0%, #f2f7fd 100%);
+    cursor: pointer;
+    transition: all .3s ease;
+    /* radial-gradient(10%, 10%, 10%)*/
+}
+
+.password__caractere-item input {
+    display: none;
+}
+
+.password__caractere-item input:checked+label {
+    transform: scale(1.3);
+    filter: brightness(150%);
+}
+
+.generer__password {
+    font-size: 1.2rem;
+    border: none;
+    background: #3362fc;
+    border-radius: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 460px) {
+    .container {
+        width: 95%;
+        min-width: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .password__caractere {
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        width: 95%;
+        min-width: 300px;
+    }
+    .password__caractere {
+        gap: 1rem;
+    }
+}
